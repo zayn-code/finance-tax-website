@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  finance-website:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - web
+
+  # Nginx 反向代理（可选）
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - finance-website
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
