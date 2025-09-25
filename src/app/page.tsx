@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -11,10 +13,10 @@ export default function Home() {
             <span className="text-xl font-bold text-gray-800">智慧财税</span>
           </div>
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-blue-600 font-medium">首页</a>
-            <a href="/services" className="text-gray-700 hover:text-blue-600 font-medium">服务项目</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium">关于我们</a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">联系我们</a>
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">首页</Link>
+            <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">服务项目</Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">关于我们</Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">联系我们</Link>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium">
               400-888-0001
             </button>
@@ -99,19 +101,19 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">服务项目</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">代理记账</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">税务筹划</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">公司注册</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">审计服务</a></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">代理记账</Link></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">税务筹划</Link></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">公司注册</Link></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">审计服务</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">关于我们</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">公司简介</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">专业团队</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">成功案例</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-blue-400">最新资讯</a></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">公司简介</Link></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">专业团队</Link></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">成功案例</Link></li>
+                <li><Link href="#" className="text-gray-300 hover:text-blue-400">最新资讯</Link></li>
               </ul>
             </div>
             <div>

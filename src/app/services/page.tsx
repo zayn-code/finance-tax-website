@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "财税服务项目 - 代理记账、税务筹划、公司注册 | 智慧财税",
@@ -116,10 +117,10 @@ export default function ServicesPage() {
             <span className="text-xl font-bold text-gray-800">智慧财税</span>
           </div>
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-blue-600 font-medium">首页</a>
-            <a href="/services" className="text-blue-600 font-medium">服务项目</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium">关于我们</a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">联系我们</a>
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">首页</Link>
+            <Link href="/services" className="text-blue-600 font-medium">服务项目</Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">关于我们</Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">联系我们</Link>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium">
               400-888-0001
             </button>
@@ -131,7 +132,7 @@ export default function ServicesPage() {
       <div className="bg-gray-100 py-4">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <nav className="text-sm">
-            <a href="/" className="text-blue-600 hover:text-blue-800">首页</a>
+            <Link href="/" className="text-blue-600 hover:text-blue-800">首页</Link>
             <span className="mx-2 text-gray-500">/</span>
             <span className="text-gray-700">服务项目</span>
           </nav>

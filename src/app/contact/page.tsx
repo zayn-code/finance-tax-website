@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function ContactPage() {
   const contactMethods = [
@@ -32,48 +33,9 @@ export default function ContactPage() {
     }
   ];
 
-  const offices = [
-    {
-      city: '北京总部',
-      address: '北京市朝阳区建国门外大街1号国贸大厦20层',
-      phone: '010-8888-0001',
-      email: 'beijing@zhihuicaishui.com',
-      hours: '周一至周五 9:00-18:00'
-    },
-    {
-      city: '上海分公司',
-      address: '上海市浦东新区陆家嘴环路1000号恒生银行大厦15层',
-      phone: '021-8888-0001', 
-      email: 'shanghai@zhihuicaishui.com',
-      hours: '周一至周五 9:00-18:00'
-    },
-    {
-      city: '深圳分公司',
-      address: '深圳市福田区深南大道4001号时代金融中心12层',
-      phone: '0755-8888-0001',
-      email: 'shenzhen@zhihuicaishui.com', 
-      hours: '周一至周五 9:00-18:00'
-    }
-  ];
-
-  const faqs = [
-    {
-      question: '如何开始使用你们的代理记账服务？',
-      answer: '您可以通过电话、微信或在线咨询联系我们，我们的专业顾问会根据您的具体情况提供定制化的服务方案。'
-    },
-    {
-      question: '代理记账服务包含哪些内容？',
-      answer: '包括日常凭证录入、财务报表编制、纳税申报、账务咨询等全套财务服务，确保您的财务管理规范有序。'
-    },
-    {
-      question: '你们的收费标准是怎样的？',
-      answer: '我们根据企业规模、业务复杂程度等因素制定合理的收费标准，具体费用请联系我们的顾问进行详细咨询。'
-    },
-    {
-      question: '服务过程中如何保证数据安全？',
-      answer: '我们采用严格的数据保密制度和先进的安全技术，确保客户信息和财务数据的绝对安全。'
-    }
-  ];
+  // 删除了未使用的 offices 和 faqs 数据
+  // const offices = [...]
+  // const faqs = [...]
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -92,10 +54,10 @@ export default function ContactPage() {
             <span className="text-xl font-bold text-gray-800">智慧财税</span>
           </div>
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-blue-600 font-medium">首页</a>
-            <a href="/services" className="text-gray-700 hover:text-blue-600 font-medium">服务项目</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium">关于我们</a>
-            <a href="/contact" className="text-blue-600 font-medium">联系我们</a>
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">首页</Link>
+            <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">服务项目</Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">关于我们</Link>
+            <Link href="/contact" className="text-blue-600 font-medium">联系我们</Link>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium">
               400-888-0001
             </button>
